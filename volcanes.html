@@ -1,0 +1,229 @@
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <aside>
+          <div class="volcanes-aside volcanes_aside_responsive">
+            <div class="volcanes_title">
+              <h4 class="volcanes_title_margin">VOLCANES MONITOREADOS</h4>
+            </div>
+            <!--<div class="row volcanes_list volcanes_list" id="sismos_list">-->
+              <section class="volcanes_monitoreados" id="sismos_list">
+                <div class="row sismos_row eag.background" onclick="selectSismo(eag.id)">
+                  <div class="col-xs-1 col-md-1"><span class="sismos_row_span"> </span></div>
+                  <div class="col-xs-11 col-md-11"><img src="" alt="" id="imagen_nivel_actividad"><span class="volcanes_row_span">eag.descripcion</span></div>
+                </div>
+              </section>
+            <!--</div>-->
+          </div>
+        </aside>
+
+        <div class="row">
+
+          <aside class="niveles_actividad_volcanica">
+            <span id="titulo_niveles_actividad_volcanica"><h5>NIVELES DE ACTIVIDAD VOLCANICA</h5></span>
+            <!--<div class="niveles actividad_volcanica">
+              <div id="titulo_actividad_volcanica">NIVELES DE ACTIVIDAD VOLCANICA</div>
+              <ul class="lista_niveles_actividad_volcanica">
+                <li><img src="images/recursos/SAE-recursos/volcanes/nivel-volcan/volcan-activo-icono-64.svg" alt="" class="img-responsive"></li>
+                <li><img src="images/recursos/SAE-recursos/volcanes/nivel-volcan/cambios-comportamiento-icono-64.svg" alt="" class="img-responsive" alt=""></li>
+                <li><img src="images/recursos/SAE-recursos/volcanes/nivel-volcan/erupcion-probable-icono-64.svg" alt="" class="img-responsive" alt=""></li>
+                <li><img src="images/recursos/SAE-recursos/volcanes/nivel-volcan/erupcion-inminente-icono-64.svg" alt="" class="img-responsive" alt=""></li>
+              </ul>
+            </div>-->
+            <!--<img src="http://localhost:3000/images/recursos/SAE-recursos/volcanes/convenciones/sprite_niveles_actividad_volcanica.png" alt="">-->
+            <ul>
+              <li><img src="images/recursos/SAE-recursos/volcanes/nivel-volcan/nivel_4.png" alt="" class="img-responsive"></li>
+              <li><img src="images/recursos/SAE-recursos/volcanes/nivel-volcan/nivel_3.png" alt="" class="img-responsive" alt=""></li>
+              <li><img src="images/recursos/SAE-recursos/volcanes/nivel-volcan/nivel_2.png" alt="" class="img-responsive" alt=""></li>
+              <li><img src="images/recursos/SAE-recursos/volcanes/nivel-volcan/nivel_1.png" alt="" class="img-responsive" alt=""></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <img src="" alt="">
+            <section class="volcanes-section volcanes_section_responsive">
+          		<div class="bootstrap_gap_none" align="center">
+          			<div class="thumbnail">
+          				<img id="volcan_img1" class="img-responsive img-center"/>
+          			</div>
+          		</div>
+          	</section>
+          </div>
+          <section class="seccion_debajo_imagen_volcanes">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 seccion_imagen_volcanes">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                    <table class="table table-bordered tablet-volcanes">
+                      <tr>
+                        <div class="imagenes_secundarias_volcanes"><img class="img-responsive img-center" id=""/></div>
+                      </tr>
+                      <thead>
+                        <tr>
+                          <th>Imágenes recientes</th>
+                          <th>Localización</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><span id=""><img src="components/sae/img/sae_svg/volcanes/imagenes-recientes-512-01.svg" alt="" class="img-responsive"></span></td>
+                          <td><a onclick="window.open('components/sae/nivel-volcan/' + eag.im_n, '_blank')"><span id="volcan_localizacion"><img src="components/sae/img/sae_svg/volcanes/localizacion-512-01.svg" alt="" class="img-responsive"></span></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                      <section class="botones_volcanes">
+                        <button type="button" name="button" class="boton_amenaza">Mapa de Amenaza Volcánica</button>
+
+                        <button type="button" name="button" class="boton_boletines">Boletines</button>
+                      </section>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 volcan_descripcion">
+                    <h4 id="volcan_nombre"></h4>
+                    <hr>
+                    <span id="nivel_volcan"><img src="" alt="" id="imagen_icono_nivel_volcan"></span>
+
+                    <div class="texto">
+                      <p>
+                        <p id="nivel">NIVEL <span id="nombre_nivel"></span> <img id="img_nivel_volcan" src="" alt=""></p>
+                        <p id="subtitulo_nivel_volcan"></p>
+                        <p><span id="texto_gris"></span></p>
+                        <div class="">
+                          <a href="#">Leer más</a>
+                        </div>
+                        <button type="button" name="button">Esta información se actualiza semanalmente</button>
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+          </div>
+          </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="prueba_volcan">
+  <img id="volcan_localizacion" src="" alt="">
+</div>
+
+
+
+<script>
+	var initvolcanesList = '';
+	var sismosArray = [];
+	volcanesList();
+
+	function volcanesList() {
+		var itemList = $("#sismos_list").html();
+		var itemListTemp = '';
+		var volcanesList = '';
+		var templatevolcanesList = '';
+		initvolcanesList = '';
+
+		$.ajax({
+			url: "components/sae/json/volcanes.json",
+			async: false,
+			dataType: 'json',
+			success: function (data) {
+			    //debugger;
+				$.each(data, function(id, eag) {
+					itemListTemp = itemList;
+					sismosArray.push(eag.nombre);
+					itemListTemp = itemListTemp.replace('eag.id', id + '');
+					itemListTemp = itemListTemp.replace('eag.descripcion', eag.nombre);
+
+					if(id % 2 == 0) {
+						itemListTemp = itemListTemp.replace('eag.background', 'sismos_row_white_span');
+					} else {
+						itemListTemp = itemListTemp.replace('eag.background', 'sismos_row_gray_span');
+					}
+
+					initvolcanesList = initvolcanesList + itemListTemp;
+
+					if(id == 0) {
+						//alert('ingresa al sismo: ' + idSismo);
+						$("#volcan_nombre").html(eag.nombre);
+						$("#volcan_nivel").html("NIVEL: " + eag.nivel);
+						$("#volcan_descripcion").html(eag.bol_desc);
+            $("#nivel_volcan").html(eag.nivel_v);
+            $("#texto_gris").html(eag.texto_g);
+            $("#volcan_imagen_principal").attr("src", "id:")
+            $("#volcan_img1").attr("src", "components/sae/volcanes_imagen_principal" + eag.img_ppal);
+						$("#volcan_boletin").attr("onclick", 'window.open("' + eag.bol_download + '", "_blank", "width=200,height=100")');
+            $("#volcan_localizacion").attr("src", "components/sae/nivel-volcan/" + eag.url_mapa_localizacion);
+
+            $("#nombre_nivel").html(eag.n_n);
+            $("#img_nivel_volcan").attr("src", "components/sae/nivel-volcan/" + eag.im_n);
+            $("#img_nivel_volcan").html(eag.i_v);
+            $("#subtitulo_nivel_volcan").html(eag.st_v);
+
+            if(eag.im_n == ""){
+              $("#volcan_localizacion").attr("style", "display: none");
+            }else{
+              $("#volcan_localizacion").attr("style", "display: visible");
+            }
+
+					}
+
+				});
+			},
+			error: function (data) {
+				console.log("ERROR: " + data);
+				alert(data);
+			}
+		});
+
+		$("#sismos_list").html(initvolcanesList);
+
+	}
+
+	function selectSismo(idSismo) {
+
+		$.ajax({
+			url: "components/sae/json/volcanes.json",
+			async: false,
+			dataType: 'json',
+			success: function (data) {
+			    //debugger;
+				$.each(data, function(id, eag) {
+
+					if(id == idSismo) {
+						$("#volcan_nombre").html(eag.nombre);
+						$("#volcan_nivel").html("NIVEL: " + eag.nivel);
+						$("#volcan_descripcion").html(eag.bol_desc);
+            $("#nivel_volcan").html(eag.nivel_v);
+            $("#texto_gris").html(eag.texto_g);
+						$("#volcan_img1").attr("src", "components/sae/volcanes_imagen_principal" + eag.img_ppal);
+						$("#volcan_boletin").attr("onclick", 'window.open("' + eag.bol_download + '", "_blank", "width=200,height=100")');
+            $("#volcan_localizacion").attr("src", "components/sae/img/volcanes_svg/" + eag.url_mapa_localizacion);
+            $("#volcan_imagen_principal").attr("src", "icomponents/sae/volcanes_imagen_principal/" + eag.url_mapa_localizacion);
+
+            $("#nombre_nivel").html(eag.n_n);
+            $("#img_nivel_volcan").attr("src", "components/sae/nivel-volcan/" + eag.im_n);
+            $("#img_nivel_volcan").html(eag.i_v);
+            $("#subtitulo_nivel_volcan").html(eag.st_v);
+
+          }
+
+				});
+			},
+			error: function (data) {
+				console.log("ERROR: " + data);
+				alert(data);
+			}
+		});
+
+	}
+
+</script>

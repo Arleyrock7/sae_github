@@ -1,0 +1,311 @@
+
+<!-- content-->
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="row">
+
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 columna_1">
+                <section class="lista">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding">
+                    <aside class="sismos_recientes">
+                      <div class="sismos-aside sismos_aside_responsive">
+                        <div class="sismos_title">
+                          <h4 class="sismos_title_margin">SISMOS RECIENTES</h4>
+                        </div>
+
+                          <div class="row sismos_row" onclick="selectSismo(eag.id)" id="titulos_lista_sismos_recientes">
+                            <div class="col-xs-1 col-md-1">
+                              <span class="sismos_row_span">&#160;</span>
+                            </div>
+                            <div class="col-xs-3 col-md-3">
+                              <span id="uno">Localización</span>
+                            </div>
+                            <div class="col-xs-3 col-md-3">
+                              <span id="dos">Fecha</span>
+                            </div>
+                            <div class="col-xs-2 col-md-2">
+                              <span id="tres">Prof/Km</span>
+                            </div>
+                            <div class="col-xs-2 col-md-2">
+                              <span id="cuatro">Magnitud</span>
+                            </div>
+                          </div>
+
+                        <section id="scroll">
+                          <!--<div class="row sismos_row_title">
+                          </div>-->
+                          <div id="sismos_list" class="row sismos_list">
+                            <div class="row sismos_row eag.background" onclick="selectSismo(eag.id)">
+                              <div class="col-xs-1 col-md-1">
+                                <span class="sismos_row_span">&#160;</span>
+                              </div>
+                              <div class="col-xs-3 col-md-3">
+                                <span class="sismos_row_span">eag.descripcion</span>
+                              </div>
+                              <div class="col-xs-3 col-md-3">
+                                <span class="sismos_row_span">eag.fecha</span>
+                              </div>
+                              <div class="col-xs-2 col-md-2">
+                                <span class="sismos_row_span">eag.profundidad</span>
+                              </div>
+                              <div class="col-xs-2 col-md-2">
+                                <span class="sismos_row_span">eag.magnitud</span>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+
+                        <seccion class="sismos_recientes_seccion_dos">
+                          <section id="datos_generales">
+                            <div class="col-xs-12 col-md-12"></div><span class="sismo_epicentro" id="sismo_epicentro"></span>
+                            <div class="col-xs-12 col-md-12"></div><span class="sismo_lugares" id="sismo_lugares"></span>
+                            <div class="col-xs-12 col-md-12"></div><span class="sismo_fecha" id="sismo_fecha"></span>
+                            <div class="col-xs-12 col-md-12"></div><span class="sismo_sentido_en" id="sismo_sentido_en"></span>
+                            <div class="col-xs-12 col-md-12"></div><span class="sismo_localizado_title" id="opciones_negrilla">Sentido en: </span>
+                            <div class="col-xs-12 col-md-12"></div><span class="sismo_localizado_title" id="opciones_negrilla">Localizado: </span>
+                            <div class="col-xs-12 col-md-12"></div><span class="sismo_localizado" id="sismo_localizado"></span>
+                            <div class="col-xs-12 col-md-12">
+                              <button id="boton_reportar" onclick="window.open('http://sismosentido.sgc.gov.co/', '_blank')">
+                                <span>¿Sintió un sismo? ¡Repórtelo!</span>
+                              </button>
+                            </div>
+                            <div class="boton_reportar_sismo"></div>
+                          </section>
+                        </seccion>
+
+                      </div>
+                    </aside>
+                  </div>
+                </div>
+
+                </section>
+              </div>
+
+
+              <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 columna_2">
+                <img class="img-responsive img-center" id="sismo_img1"/>
+                <img src="images/recursos/SAE-recursos/sismos/cabezotes/cabezotes-sae-09.svg" id="cabezote"alt="">
+              </div>
+
+
+              <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 columna_3">
+                      <div class="row controls_hand sismo_magnitud_profundidad_title" align="center">
+                        <!-- <div class="col-xs-6 col-md-6 sismo_magnitud_profundidad_title"><span class="sismo_magnitud_profundidad_title" img="">Magnitud</span></div>-->
+                        <!-- <div class="col-xs-6 col-md-6 sismo_magnitud_profundidad_title"><span class="sismo_magnitud_profundidad_title">Profundidad</span></div>-->
+                      </div>
+                        <div class="row controls_hand sismo_magnitud_profundidad" align="center">
+                          <table class="table table-bordered" id="tabla">
+                            <thead>
+                              <tr>
+                                <th>Magnitud</th>
+                                <th>Profundidad</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td id="background_sismo_magnitud"><span id="sismo_magnitud"></span></td>
+                                <td id="background_sismo_profundidad"><span id="sismo_profundidad"></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <section id="imagen_intensidad_convenciones">
+                                <!--<div class="imagenes_secundarias_sismos"><img class="img-responsive img-center" id="sismo_img3"/></div>-->
+                            <table class="table table-bordered">
+                              <tr>
+                                <div class="imagenes_secundarias_sismos"><img class="img-responsive img-center" id="sismo_img2"/></div>
+                              </tr>
+                              <tr>
+                                <thead id="intensidad_head">
+                                  <tr>
+                                    <th>Intensidad máxima</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="intensidad_body">
+                                  <tr>
+                                    <td><img src="" id="descURL"></img></td>
+                                  </tr>
+                                </tbody>
+                              </tr>
+                              <tr>
+                                <thead id="convenciones_head">
+                                  <tr>
+                                    <th>Convenciones</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="convenciones_body">
+                                  <tr>
+                                    <td><img src="images/recursos/SAE-recursos/sismos/niveles-intensidad/convenciones-intensidad-01.svg"></img></td>
+                                  </tr>
+                                </tbody>
+                              </tr>
+                            </table>
+                          </section>
+
+                        </div>
+                          <div class="row">
+                            <button class="sismo_button" id="sismo_kml" onclick="window.open('', '_blank')">Descargar KML</button>
+                          </div>
+                          <div class="row">
+                            <button class="sismo_button_mas_info" id="sismo_mas_info">Más información</button>
+                            <div class="triangulo_mas_info"></div>
+                          </div>
+              </div>
+
+
+
+      </div>
+  </div>
+</div>
+
+      <!--<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1"> </div>-->
+
+
+<script>
+  var initSismosList = '';
+  var sismosArray = [];
+  sismosList();
+  function sismosList() {
+  var itemList = $("#sismos_list").html();
+  var itemListTemp = '';
+  var sismosList = '';
+  var templateSismosList = '';
+  initSismosList = '';
+
+
+  $.ajax({
+    url: "components/sae/json/sismos.json",
+    async: false,
+    dataType: 'json',
+    success: function (data) {
+      $.each(data, function(id, eag) {
+        itemListTemp = itemList;
+        sismosArray.push(eag.description);
+        itemListTemp = itemListTemp.replace('eag.id', id + '');
+        itemListTemp = itemListTemp.replace('eag.descripcion', eag.description);
+        itemListTemp = itemListTemp.replace('eag.fecha', eag.last_modified);
+        itemListTemp = itemListTemp.replace('eag.profundidad', eag.depth);
+        itemListTemp = itemListTemp.replace('eag.magnitud', eag.mag);
+
+        if(id % 2 == 0) {
+          itemListTemp = itemListTemp.replace('eag.background', 'sismos_row_white_span');
+        } else {
+          itemListTemp = itemListTemp.replace('eag.background', 'sismos_row_gray_span');
+        }
+        initSismosList = initSismosList + itemListTemp;
+        selectSismo(0);
+        return;
+      });
+    $("#sismos_list").html(initSismosList);
+  },
+  error: function (data) {
+      console.log("ERROR: " + data);
+      alert(data);
+      }
+    });
+
+
+  }
+
+
+
+
+/*
+
+if(id == 0) {
+  $("#sismo_epicentro").html(eag.description);
+  var lugaresArray = eag.closer_towns.split(',');
+  var lugares = '';
+  for(var i=0; i<lugaresArray.length; i++) {
+    lugares = lugares + '<span class="sismo_lugares">' + lugaresArray[i] + '</span></br>';
+  }
+  $("#sismo_lugares").html(eag.lugares);
+  $("#sismo_fecha").html(eag.last_modified);
+  $("#sismo_sentido_en").html(eag.felt_report);
+  $("#sismo_localizado").html(eag.description);
+  $("#sismo_magnitud").html(eag.mag);
+  $("#sismo_profundidad").html(eag.depth);
+  $("#sismo_img1").attr("src", eag.mapURL);
+  ///$("#sismo_img2").attr("src", eag.shakemapURL);
+  $("#sismo_img2").attr("src", eag.drURL);
+  $("#descURL").attr("src", eag.descURL);
+  $("#sismo_img3").attr("src", eag.traces);
+  $("#sismo_kml").attr("onclick", 'window.open("' + eag.mapURL + '", "_blank", "width=200,height=100")');
+}
+*/
+
+
+  function selectSismo(idSismo) {
+    $.ajax({
+      url: "components/sae/json/sismos.json",
+      async: true,
+      dataType: 'json',
+      success: function (data) {
+        $.each(data, function(id, eag) {
+          if(id == idSismo) {
+            $("#sismo_epicentro").html(eag.description);
+            var lugaresArray = eag.closer_towns.split(',');
+            var lugares = '';
+            for(var i=0; i<lugaresArray.length; i++) {
+              lugares = lugares + '<span class="sismo_lugares">' + lugaresArray[i] + '</span></br>';
+            }
+            $("#sismo_lugares").html(lugares);
+            $("#sismo_fecha").html(eag.last_modified);
+            $("#sismo_sentido_en").html(eag.felt_report);
+            $("#sismo_localizado").html(eag.description);
+            $("#sismo_magnitud").html(eag.mag);
+            $("#sismo_profundidad").html(eag.depth);
+            $("#sismo_img1").attr("src", eag.mapURL);
+            ///$("#sismo_img2").attr("src", eag.shakemapURL);
+            $("#sismo_img2").attr("src", eag.drURL);
+            $("#sismo_img3").attr("src", eag.traces);
+            $("#sismo_kml").attr("onclick", 'window.open("' + eag.mapURL + '", "_blank", "width=200,height=100")');
+            $("#descURL").attr("src", eag.descURL);
+            $("#convenciones").attr("src", eag.convenciones);
+
+            // Validaciones Hide/Show
+            /*if(eag.descURL === ""){
+              $("#intensidad_head").attr("style", "display: none");
+              $("#intensidad_body").attr("style", "display: none");
+            } else{
+              $("#intensidad_head").attr("style", "display: visible");
+              $("#intensidad_body").attr("style", "display: visible");
+            }
+
+            if(eag.convenciones === ""){
+              $("#convenciones_head").attr("style", "display: none");
+              $("#convenciones_body").attr("style", "display: none");
+            } else {
+              $("#convenciones_head").attr("style", "display: visible");
+              $("#convenciones_body").attr("style", "display: visible");
+            }*/
+
+            if(eag.drURL === ""){
+              $("#sismo_img2").attr("style", "display: none");
+              $("#intensidad_head").attr("style", "display: none");
+              $("#intensidad_body").attr("style", "display: none");
+              $("#convenciones_head").attr("style", "display: none");
+              $("#convenciones_body").attr("style", "display: none");
+            }else{
+              $("#sismo_img2").attr("style", "display: visible");
+              $("#intensidad_head").attr("style", "display: visible");
+              $("#intensidad_body").attr("style", "display: visible");
+              $("#convenciones_head").attr("style", "display: visible");
+              $("#convenciones_body").attr("style", "display: visible");
+            }
+
+            /*if(eag.descURL === ""){
+              $("#tabla").attr("style", "display: none");
+            }*/
+
+          }
+  });
+  },
+    error: function (data) {
+      console.log("ERROR: " + data);
+      alert(data);
+      }
+    });
+  }
+
+</script>
